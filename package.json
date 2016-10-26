@@ -1,17 +1,17 @@
 {
-  "name": "malihu-custom-scrollbar-plugin",
+  "name": "malihu-custom-scrollbar-plugin-carnid-mod",
   "version": "3.1.5",
   "author": "malihu (http://manos.malihu.gr)",
-  "description": "Highly customizable custom scrollbar jQuery plugin, featuring vertical/horizontal scrollbars, scrolling momentum, mouse-wheel, keyboard and touch support user defined callbacks etc.",
+  "description": "This is an alternate version of malihu's great custom scrollbar plugin. The only difference between the mouseWheel diableOver option taking css selectors instead of only tags",
   "license": "MIT",
   "homepage": "http://manos.malihu.gr/jquery-custom-content-scroller",
   "main": "./jquery.mCustomScrollbar.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/malihu/malihu-custom-scrollbar-plugin.git"
+    "url": "https://github.com/carnid/malihu-custom-scrollbar-plugin.git"
   },
   "bugs": {
-    "url": "https://github.com/malihu/malihu-custom-scrollbar-plugin/issues"
+    "url": "https://github.com/carnid/malihu-custom-scrollbar-plugin/issues"
   },
   "keywords": [
     "jquery-plugin",

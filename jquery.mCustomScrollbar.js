@@ -1553,10 +1553,16 @@ and dependencies (minified).
 		/* disables mouse-wheel when hovering specific elements like select, datalist etc. */
 		_disableMousewheel=function(el,target){
 			var tag=target.nodeName.toLowerCase(),
-				tags=el.data(pluginPfx).opt.mouseWheel.disableOver,
+				disableSelectors=el.data(pluginPfx).opt.mouseWheel.disableOver,
 				/* elements that require focus */
 				focusTags=["select","textarea"];
-			return $.inArray(tag,tags) > -1 && !($.inArray(tag,focusTags) > -1 && !$(target).is(":focus"));
+
+			var disableWheel = false;
+			$.each(disableSelectors, function(idx, disableSelector) {
+				disableWheel = tag == disableSelector || $(target).is(disableSelector) || $(disableSelector).find(target).length > 0;
+				if(disableWheel === true) return false;
+			});
+			return disableWheel && !($.inArray(tag,focusTags) > -1 && !$(target).is(":focus"));
 		},
 		/* -------------------- */
 		
